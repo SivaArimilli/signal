@@ -1,0 +1,21 @@
+.card{
+    width:100%;  
+    margin: 10px;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+.btn{
+display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.submit-btn{
+    
+   position: relative;
+   top: 10px;
+}

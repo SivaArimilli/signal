@@ -1,0 +1,30 @@
+<div class="card" >
+  <p-table
+    [value]="productStore.products()"
+    [tableStyle]="{ 'min-width': '30rem' }"
+  >
+    <ng-template #header>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-product>
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <div class="icon">
+            <span class="pi pi-trash" (click)="delete(product.id)"></span>
+            <span class="pi pi-pencil" (click)="update(product.id)"></span>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

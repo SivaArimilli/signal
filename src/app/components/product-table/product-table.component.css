@@ -1,0 +1,10 @@
+.card{
+    width: 100%;
+     margin: 10px;
+     border: 1px solid rgb(236, 230, 230);
+}
+
+.icon{
+    display: flex;
+    justify-content: space-around;
+}

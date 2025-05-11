@@ -1,0 +1,21 @@
+<div class="card">
+<p-card header="Add product" >
+
+  <form [formGroup]="productForm">
+    <div class="form">
+    
+    <input pInputText formControlName="name" placeholder="Name" >
+     <input pInputText formControlName="quantity" placeholder="Quantity" >
+      <input pInputText formControlName="price" placeholder="Price" >
+    </div>
+  
+    </form>
+    <div class="btn">
+   <button pButton class="submit-btn" (click)="submit()" *ngIf="!showBtn">Submit</button>
+    <button pButton class="submit-btn" (click)="update()" *ngIf="showBtn">update</button>
+       <button pButton class="submit-btn" (click)="back()" *ngIf="showBtn">Back</button>
+    </div>
+
+  
+</p-card>
+</div>
