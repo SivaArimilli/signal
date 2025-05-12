@@ -1,4 +1,4 @@
-<div class="card" >
+<div class="card" *ngIf="productStore.products().length>0">
   <p-table
     [value]="productStore.products()"
     [tableStyle]="{ 'min-width': '30rem' }"

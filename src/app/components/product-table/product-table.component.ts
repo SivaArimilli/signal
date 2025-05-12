@@ -3,10 +3,11 @@ import { TableModule } from 'primeng/table';
 import { ProductStore } from '../../../store/product.store';
 import { Product } from '../../../models/product.model';
 import { ProductService } from '../../product.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-table',
-  imports: [TableModule],
+  imports: [TableModule,CommonModule],
   templateUrl: './product-table.component.html',
   styleUrl: './product-table.component.css'
 })
@@ -14,8 +15,11 @@ export class ProductTableComponent implements OnInit{
    productStore=inject(ProductStore)
    service=inject(ProductService)
 
-constructor(){}
+constructor(){
+  
+}
   ngOnInit() {
+
   
     
   }
