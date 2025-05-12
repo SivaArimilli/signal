@@ -19,7 +19,7 @@ export class ProductChartComponent implements OnInit {
      this.lableData=this.productStore.products()
     this.quantity=this.lableData.map((ele)=>ele.quantity)
      this.price=this.lableData.map((ele)=>ele.price)
-     console.log(this.lableData,'efffect');
+  
      this.chart()
     })
  }

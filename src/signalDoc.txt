@@ -1,0 +1,47 @@
+Application Structure
+----------------------
+
+Components
+----------
+ProductAddComponent – Handles adding new products via a form.
+
+ProductTableComponent – Lists products with options to edit or delete.
+
+ProductChartComponent – Displays a bar chart visualization of product data.
+
+Shared Service
+--------------
+A custom ProductService was implemented using an RxJS Subject to pass data between components,
+especially from the table to the form for editing.
+
+State Management with @ngrx/signals Store
+-----------------------------------------
+I chose @ngrx/signals store for centralized and reactive state management of products.
+
+Signals provide reactive state exposure for easy UI updates.
+
+CRUD actions (addProduct, updateProduct, deleteProduct) modify the state in an immutable fashion.
+
+Store Design
+------------
+I used TypeScript interfaces to define the structure of the product data and the overall store state. This ensures type safety, 
+improves code readability, and helps prevent runtime errors by enforcing consistent data shapes.
+
+Patterns Used
+--------------
+1. signalEffect
+Used to perform side effects when signal-based state changes (e.g., logging, syncing with chart).
+
+2. RxJS Subject in Service
+Enables component-to-component communication (e.g., selecting a product in the table sends it to the form for editing).
+
+Keeps data flow decoupled and simple without overusing the store.
+
+Note: computedSignal was not used in this app. If future needs require derived or aggregated data 
+(like total product count or combined value),computedSignal can be introduced for that purpose.
+
+ Summary
+ -------
+The Angular 19 CRUD application uses a modern signal-based state management approach with @ngrx/signals,
+ paired with an RxJS Subject-based service for targeted data sharing. The application is modular, reactive, 
+ and easy to maintain or scale for future enhancements.
